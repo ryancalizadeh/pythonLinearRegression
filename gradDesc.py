@@ -14,7 +14,12 @@ def gradDesc(model, data, learningRate):
     prevCost = model.cost(data)
     prevTheta = [model.theta0, model.theta1]
 
+    global epoch
+    epoch = 0
+
     while check:
+        epoch += 1
+        print("Epoch ", epoch)
         print("Slope: ", model.theta1)
         print("Y-intercept: ", model.theta0)
         print("Cost: ", model.cost(data))
@@ -47,6 +52,9 @@ def gradDesc(model, data, learningRate):
             print("Succesful epoch: lowered cost by: ", prevCost - newCost)
 
         prevCost = newCost
+        prevTheta = [model.theta0, model.theta1]
+    
+    return epoch
 
 
 
