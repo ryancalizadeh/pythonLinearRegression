@@ -1,3 +1,11 @@
+"""
+gradDesc(model, data, learningRate) applies 2 variable gradient descent on model "model" for data set "data" at set learning rate "learningRate"
+Every epoch prints: new theta0, theta1, and their cost, along with the difference between cost of each consecutive epoch
+Stops when:
+    The difference between two consecutive costs is 0
+    The difference is negative (i.e. cost has gone up) in which case it will revert to the previous values
+"""
+
 from modelClass import *
 
 def gradDesc(model, data, learningRate):

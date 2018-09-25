@@ -1,4 +1,8 @@
-
+"""
+model(theta0, theta1) class creates a linear model (two variable)
+hypothesis(x) applies the model to "x"
+cost(data) calculates the models cost for data set "data"
+"""
 
 def square(a):
     return a * a
