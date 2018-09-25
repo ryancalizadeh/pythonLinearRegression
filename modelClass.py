@@ -5,6 +5,9 @@ def square(a):
 
 class model:
 
+    global theta0
+    global theta1
+
     theta0 = 0
     theta1 = 0
 
